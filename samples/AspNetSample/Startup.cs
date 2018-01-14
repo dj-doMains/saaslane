@@ -8,7 +8,6 @@
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
     using Microsoft.Extensions.DependencyInjection;
-    using Saaslane;
 
     public class Startup
     {
@@ -19,14 +18,12 @@
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseSaaslane();
+            app.UseSaaslane<AppTenant>();
 
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
-          
 
             app.Run(async (context) =>
             {

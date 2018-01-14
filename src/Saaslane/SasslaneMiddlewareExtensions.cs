@@ -1,13 +1,12 @@
-namespace Saaslane
+namespace Microsoft.AspNetCore.Builder
 {
-    using Microsoft.AspNetCore.Builder;
     using Saaslane.Internal;
 
     public static class SaaslaneMiddlewareExtensions
     {
-        public static IApplicationBuilder UseSaaslane(this IApplicationBuilder builder)
+        public static IApplicationBuilder UseSaaslane<TTenant>(this IApplicationBuilder builder)
         {
-            return builder.UseMiddleware<SaaslaneMiddleware>();
+            return builder.UseMiddleware<SaaslaneMiddleware<TTenant>>();
         }
-    }    
+    }
 }
