@@ -4,9 +4,9 @@ namespace AspNetSample
     using Microsoft.AspNetCore.Http;
     using Saaslane;
 
-    public class AppTenantResolver : ITenantResolver
+    public class AppTenantResolver : ITenantResolver<AppTenant>
     {
-        Task<TenantContext> ITenantResolver.Resolve(HttpContext context)
+        Task<TenantContext<AppTenant>> ITenantResolver<AppTenant>.Resolve(HttpContext context)
         {
             throw new System.NotImplementedException();
         }

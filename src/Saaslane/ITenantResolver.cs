@@ -3,8 +3,8 @@ namespace Saaslane
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Http;
 
-    public interface ITenantResolver
+    public interface ITenantResolver<TTenant>
     {
-        Task<TenantContext> Resolve(HttpContext context);
+        Task<TenantContext<TTenant>> Resolve(HttpContext context);
     }
 }

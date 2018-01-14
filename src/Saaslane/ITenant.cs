@@ -2,8 +2,8 @@
 {
     using System;
 
-    public interface ITenant
+    public interface ITenant<TTenant>
     {
-        
+
     }
 }
