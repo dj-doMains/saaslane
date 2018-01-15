@@ -7,6 +7,7 @@
     using AspNetMvcSample.Multitenancy;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Mvc.Razor;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
 
@@ -23,6 +24,11 @@
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMultitenancy<AppTenant, CachingAppTenantResolver>();
+
+            services.Configure<RazorViewEngineOptions>(options =>
+            {
+                options.ViewLocationExpanders.Add(new TenantViewLocationExpander());
+            });
 
             services.Configure<MultitenancyOptions>(Configuration.GetSection("Multitenancy"));
 
