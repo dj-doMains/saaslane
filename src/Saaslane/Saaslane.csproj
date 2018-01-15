@@ -7,4 +7,17 @@
     <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="2.0.0"/>
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.0.0"/>
   </ItemGroup>
+  <PropertyGroup>
+    <Description>A simple toolkit for building .NET Core SaaS (Software As A Service) applications!</Description>
+    <Copyright>Copyright Jonathan Madison</Copyright>
+    <Authors>Jonathan Madison</Authors>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <AssemblyName>Saaslane</AssemblyName>
+    <PackageId>Saaslane</PackageId>
+    <PackageTags>saas multitenancy tenant</PackageTags>
+    <PackageProjectUrl>https://github.com/dj-doMains/saaslane</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/dj-doMains/saaslane</RepositoryUrl>
+    <Version>0.0.1</Version>
+  </PropertyGroup>
 </Project>
